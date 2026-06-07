@@ -253,3 +253,53 @@ button{
   border:none;
   box-shadow: var(--bayangan-atas), var(--bayangan-bawah);
 }
+@media (min-width: 768px) {
+  .brand h1{
+    position:relative;
+    top:0.7em;
+  }
+  .brand p{
+    display: none;
+  }
+  header{
+    display: flex;
+    flex-flow: row;
+  }
+  .hamburger{
+    display: none;
+  }
+  nav{
+    flex-grow: 1;
+    position: static;
+    display: flex;
+    height:auto;
+    box-shadow:none;
+    gap:10px;
+    justify-content: space-between;
+  }
+  nav ul{
+    flex-grow:1;
+    flex-direction: row;
+    order: 1;
+    height: auto;
+    box-shadow: var(--bayangan-atas), var(--bayangan-bawah);
+    border-radius:10px;
+  }
+  nav ul li{
+    box-shadow:none;
+    border:2px solid var(--warna-kedua);
+    min-width:10%;
+  }
+  #tema{
+    position:relative;
+    order: 2;
+    left:1.8em;
+  }
+  section{
+    scroll-margin-top: 160px;
+  }
+  .skill ul {
+    flex-direction: row;
+    gap:15px
+  }
+}
