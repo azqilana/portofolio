@@ -162,6 +162,11 @@ section {
 .skill{
   padding: 40px 10px;
 }
+.skill h2{
+  margin-bottom:10px;
+  font-weight:900;
+  font-size:25px;
+}
 .skill ul{
   margin: 1px auto;
   height: 100%;
@@ -197,7 +202,6 @@ main{
   flex-direction: column;
   justify-content: space-evenly;
   padding: 40px 20px;
-  scroll-margin-top: 85px;
 }
 .kontak h2{
   font-weight:900;

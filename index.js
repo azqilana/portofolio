@@ -14,6 +14,12 @@ tema.addEventListener('click', () => {
     tema.textContent = "Terang"
   }
 })
+document.addEventListener("click", (e) => {
+  if (!nav.contains(e.target) && !hamenu.contains(e.target)) {
+    nav.classList.remove("aktif");
+    hamenu.classList.remove("aktif");
+  }
+});
 const Wa=document.querySelector("#whatsapp")
 
 Wa.addEventListener('click', (e) => {
