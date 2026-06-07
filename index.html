@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <meta name="robots" content="" />
+    <meta name="author" content="" />
+    <meta property="og:title" content="" />
+    <meta property="og:description" content="" />
+    <meta property="og:image" content="" />
+    <link rel="stylesheet" href="index.css" type="text/css" media="all" />
+    <title></title>
+  </head>
+  <body>
+    <header>
+      <div class="brand">
+        <h1>Arjuna Arc</h1>
+        <p>Mulai aja dulu</p>
+      </div>
+      <button class="hamburger" id="hamburger">
+        <span class="garis"></span>
+        <span class="garis"></span>
+      </button>
+      <nav id="nav">
+        <button id="tema">Gelap</button>
+        <ul>
+          <li><a href="#hero">Beranda</a></li>
+          <li><a href="#skill">Skill</a></li>
+          <li><a href="#kontak">Kontak</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <section id="hero" class="hero">
+        <img src="media/pp.webp" alt="Arjuna Arc pp" width="150px" height="150px"/>
+        <h2>Arjuna Ark</h2>
+        <p>Mulai Aja Dulu</p>
+      </section>
+      <section id="skill" class="skill">
+        <ul>
+          <li><a>HTML</a></li>
+          <li><a>CSS</a></li>
+          <li><a>Javascript</a></li>
+        </ul>
+      </section>
+      <section id="kontak" class="kontak">
+        <h2>Hubungi Saya</h2>
+        <form>
+            <label for="nama"></label>
+            <input type="text" name="nama" id="nama" placeholder=" Nama Anda" value=""/>
+            <input
+              type="email"
+              name="email"
+              id="email"
+              placeholder=" Emailanda@email.com"
+           value="" />
+            <textarea name="pesan" id="pesan" rows="5" cols="20"></textarea>
+            <div class="tombol">
+            <button id="whatsapp">WhatsApp</button>
+            <button id="kirim">Kirim</button>
+            </div>
+        </form>
+      </section>
+    </main>
+    <script src="index.js"></script>
+  </body>
+</html>

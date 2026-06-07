@@ -1,0 +1,251 @@
+@font-face {
+  font-family: 'Plus Jakarta Sans';
+  src: url('huruf/pj.woff2') format('woff2');
+  font-weight: 100 900;
+  font-display: swap;
+}
+:root {
+  --warna-utama: #ffffff;
+  --warna-kedua: #2563eb;
+  --warna-text: #111111;
+  --blur: rgba(255, 255, 255, 0.8);
+  --warna-border: #e0e0e0;
+  --bayangan-atas: 0 -2px 10px var(--warna-kedua);
+  --bayangan-bawah: 0 2px 10px var(--warna-border);
+  --hijau-wa: #25D366;
+}
+
+[data-theme="gelap"] {
+  --warna-utama: #0f0f0f;
+  --warna-kedua: #3b82f6;
+  --warna-text: #f5f5f5;
+  --blur: rgba(0, 0, 0, 0.8);
+  --warna-border: #2a2a2a;
+  --hijau-wa: #1da851;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+  text-align: center;
+  color: var(--warna-text);
+  font-family: 'Plus Jakarta Sans', sans-serif;
+}
+body {
+  overflow-x: hidden;
+  background-color: var(--warna-utama);
+}
+header{
+  position: sticky;
+  padding:15px;
+  margin: 10px;
+  border-radius:10px;
+  top:2px;
+  box-shadow: var(--bayangan-atas), var(--bayangan-bawah);
+  z-index:1;
+  background-color: var(--warna-utama);
+}
+.brand{
+  margin:5px auto;
+  padding:5px;
+}
+.brand h1{
+  font-weight:900;
+  font-size:30px;
+}
+.brand p{
+  font-weight:900;
+}
+img{
+  border-radius:50%;
+}
+nav {
+  background-color: var(--warna-utama);
+  padding: 10px;
+  margin: 10px;
+  border-radius: 10px;
+  box-shadow: var(--bayangan-atas), var(--bayangan-bawah);
+  position:fixed;
+  width: 50vw;
+  height: 50vh;
+  transition: 0.7s;
+  top:110px;
+  left: 400px;
+}
+nav.aktif {
+  left: 160px;
+}
+nav ul{
+  height:46vh;
+  display: flex;
+  flex-direction:column;
+  justify-content: space-evenly;
+}
+#tema{
+  font-weight: 900;
+  padding:5px 10px;
+  border-radius:10px;
+  border:2px solid var(--warna-border);
+}
+nav ul li {
+  border: 2px solid var(--warna-border);
+  padding: 10px;
+  border-radius: 10px;
+  margin: 10px;
+  box-shadow: var(--bayangan-atas), var(--bayangan-bawah);
+}
+nav ul li a{
+  font-weight:900;
+}
+.garis {
+  display: block;
+  width: 30px;
+  padding: 3px;
+  margin: 3px;
+  background-color: var(--warna-utama);
+  border: 2px solid var(--warna-border);
+  border-radius:10px;
+  transition:0.4s;
+}
+.hamburger.aktif .garis{
+  background-color: red;
+  height: 3px;
+  margin: 4px 0;
+  padding: 0;
+  border-color:red;
+}
+.hamburger.aktif{
+  padding-left:5px ;
+}
+.hamburger.aktif .garis:nth-child(1) {
+  transform: rotate(45deg) translate(3px, 3px);
+}
+.hamburger.aktif .garis:nth-child(2) {
+  transform: rotate(-45deg) translate(3px, -3px);
+}
+.hamburger {
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0);
+  top:33px;
+  right:10px;
+  padding-left:2px ;
+  width:40px;
+  height:40px;
+  border: none;
+  border-radius: 10px;
+  z-index: 1;
+  box-shadow: var(--bayangan-atas), var(--bayangan-bawah);
+}
+section {
+  box-shadow: var(--bayangan-atas), var(--bayangan-bawah);
+  border-radius:10px;
+  padding: 10px;
+  margin: 10px;
+  /* height:80vh; */
+  scroll-margin-top: 125px;
+}
+.hero{
+  margin-top:20px ;
+  padding: 60px 10px;
+}
+.hero h2{
+  color:var(--warna-kedua);
+  font-weight:900;
+  font-size:50px;
+}
+.hero p{
+  font-weight:800;
+  font-size:20px;
+}
+.skill{
+  padding: 40px 10px;
+}
+.skill ul{
+  margin: 1px auto;
+  height: 100%;
+  display: flex;
+  flex-direction:column;
+  justify-content:space-evenly;
+  gap:10px;
+}
+.skill ul li{
+  border-radius:20px;
+  padding: 15%;
+  font-weight:900;
+  font-size:20px;
+  color:black;
+}
+
+.skill ul li:nth-child(1){
+  background-color:#E34C26;
+}
+.skill ul li:nth-child(2){
+  background-color:rgb(38, 77, 228);
+}
+.skill ul li:nth-child(3){
+  background-color:#f7df1e;
+}
+main{
+  display: flex;
+  flex-direction: column;
+  gap:20px
+}
+.kontak{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  padding: 40px 20px;
+  scroll-margin-top: 85px;
+}
+.kontak h2{
+  font-weight:900;
+  font-size:25px;
+}
+.kontak form{
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.kontak form input{
+  padding: 10px;
+  border-radius:20px;
+  border:2px solid var(--warna-border);
+  box-shadow: var(--bayangan-atas), var(--bayangan-bawah);
+  font-weight:600;
+  font-size:17px;
+}
+.kontak form input:focus{
+  outline:none;
+}
+.kontak form textarea:focus{
+  outline:none;
+}
+.kontak form textarea{
+  border:2px solid var(--warna-border);
+  box-shadow: var(--bayangan-atas), var(--bayangan-bawah);
+  border-radius:10px;
+  text-align:left;
+  padding:5px 15px;
+  resize: none;
+}
+.kontak form .tombol{
+  display:grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+button{
+  background-color:var(--warna-kedua);
+}
+#whatsapp{
+  background-color:var(--hijau-wa);
+}
+.kontak form .tombol button{
+  font-size:20px;
+  font-weight:900;
+  border-radius: 10px;
+  padding: 10px;
+  border:none;
+  box-shadow: var(--bayangan-atas), var(--bayangan-bawah);
+}
