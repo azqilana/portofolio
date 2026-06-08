@@ -317,7 +317,7 @@ button{
     position:relative;
     order: 2;
     left:1.8em;
-    border-radius:50%;
+    border-radius:10px;
   }
   section{
     scroll-margin-top: 160px;
@@ -337,5 +337,8 @@ button{
     align-items: center;
     justify-content: center;
     font-size: 3em;
+  }
+  .kontak form input{
+    border-radius:10px;
   }
 }
