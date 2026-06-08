@@ -73,9 +73,9 @@ nav {
   position:fixed;
   width: 50vw;
   height: 50vh;
-  transition: 0.7s;
+  transition: 0.5s;
   top:110px;
-  left: 400px;
+  left: 800px;
 }
 nav.aktif {
   left: 160px;
