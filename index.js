@@ -71,3 +71,10 @@ kirim.addEventListener('click', (e) => {
   })
   .catch(() => alert('Gagal kirim'));
 });
+const footer = document.querySelector("footer")
+
+window.addEventListener('scroll', () => {
+  if (window.scrollY >= footer.offsetTop - window.innerHeight) {
+    footer.classList.add('sticky')
+  }
+})

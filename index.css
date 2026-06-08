@@ -256,8 +256,20 @@ button{
   border:none;
   box-shadow: var(--gaya-list);
 }
+footer{
+  padding:15px;
+  margin: 10px;
+  border-radius:10px;
+  box-shadow: var(--gaya-list);
+  z-index:1;
+  background-color: var(--warna-utama);
+}
+footer.sticky{
+  position:sticky;
+  bottom:0;
+}
 @media (min-width: 768px) {
-  header, section,nav ul li{
+  header,footer,section,nav ul li{
     box-shadow: none;
     border-width: 2px ; /* atas kanan bawah kiri */
     border-style: solid;
@@ -281,6 +293,7 @@ button{
     display: none;
   }
   header{
+    top:0px;
     display: flex;
     flex-flow: row;
     padding: 8px 15px;
