@@ -253,7 +253,7 @@ button{
   border:none;
   box-shadow: var(--bayangan-atas), var(--bayangan-bawah);
 }
-@media (min-width: 1024px) {
+@media (min-width: 768px) {
   .brand h1{
     position:relative;
     top:0.7em;
