@@ -279,10 +279,6 @@ footer{
   z-index:1;
   background-color: var(--warna-utama);
 }
-footer.sticky{
-  position:sticky;
-  bottom:0;
-}
 @media (min-width: 768px) {
   header,footer,section,nav ul li{
     box-shadow: none;
