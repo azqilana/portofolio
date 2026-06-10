@@ -233,7 +233,7 @@ main {
   display: flex;
   justify-content: center;
   flex-direction: column;
-  max-width: 90%;
+  width: 90%;
   gap: 10px;
   box-shadow: var(--gaya-list);
   padding: 10px;
@@ -390,6 +390,7 @@ footer {
   }
   .kontak .sosmed {
     width: 60%;
+    padding: 30px;
     box-shadow: none;
     border: var(--gaya-list-desktop);
   }
