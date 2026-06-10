@@ -189,6 +189,9 @@ section {
 }
 .skill ul li a {
   font-weight: 900;
+  background-color: var(--warna-utama);
+  padding: 10px;
+  border-radius: 10px;
 }
 .skill ul li:nth-child(1) {
   background-color: #E34C26;
