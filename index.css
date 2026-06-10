@@ -249,9 +249,6 @@ svg {
   position: relative;
   bottom: 20px;
 }
-#li {
-  color: var(--biru-linkedin);
-}
 .kontak form input {
   padding: 10px;
   border-radius: 20px;
