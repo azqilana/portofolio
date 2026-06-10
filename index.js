@@ -2,7 +2,17 @@ const hamenu = document.querySelector("#hamburger");
 const nav = document.querySelector("#nav");
 hamenu.addEventListener("click", () => {
   nav.classList.toggle("aktif");
-  hamenu.classList.toggle("aktif")
+  hamenu.classList.toggle("aktif");
+
+  if (nav.classList.contains("aktif")) {
+    const hRect = hamenu.getBoundingClientRect();
+    const navWidth = nav.offsetWidth;
+    nav.style.left = (hRect.right - navWidth) + "px";
+    nav.style.top = (hRect.bottom + 26) + "px";
+  } else {
+    nav.style.left = "";
+    nav.style.top = "";
+  }
 });
 const tema = document.querySelector("#tema")
 tema.addEventListener('click', () => {

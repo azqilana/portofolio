@@ -1,75 +1,100 @@
 <!doctype html>
 <html lang="id">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <meta name="description" content="Azqilana junior web developer membantu anda membuat website landing page atau company profile yang responsif dan ramah SEO.">
-    <meta name="keywords" content="website,landing page,company profile,portofolio,web promosi,web pribadi,web,web personal,personal branding" />
-    <meta name="robots" content="index,follow" />
-    <meta name="author" content="azqilana" />
-    <meta property="og:title" content="Azqilana - Junior Web Developer" />
-    <meta property="og:description" content="Azqilana junior web developer membantu anda membuat website landing page atau company profile yang responsif dan ramah SEO." />
-    <meta property="og:image" content="media/pp.webp" />
-    <link rel="stylesheet" href="index.css" type="text/css" media="all" />
-    <title>Azqilana - Junior Web Developer</title>
+  <meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+<meta name="description" content="Azqilana junior web developer membantu anda membuat website landing page atau company profile yang responsif dan ramah SEO.">
+<meta name="keywords" content="website,landing page,company profile,portofolio,web promosi,web pribadi,web,web personal,personal branding" />
+<meta name="robots" content="index,follow" />
+<meta name="author" content="azqilana" />
+<meta property="og:title" content="Azqilana - Junior Web Developer" />
+<meta property="og:description" content="Azqilana junior web developer membantu anda membuat website landing page atau company profile yang responsif dan ramah SEO." />
+<meta property="og:image" content="media/pp.webp" />
+<link rel="stylesheet" href="index.css" type="text/css" media="all" />
+<title>Azqilana - Junior Web Developer</title>
 </head>
 
-  <body>
-    <header>
-      <div class="brand">
-        <h1>Azqilana</h1>
-        <p>Mulai aja dulu</p>
-      </div>
-      <button class="hamburger" id="hamburger">
-        <span class="garis"></span>
-        <span class="garis"></span>
-      </button>
-      <nav id="nav">
-        <button id="tema">Gelap</button>
-        <ul>
-          <li><a href="#hero">Beranda</a></li>
-          <li><a href="#skill">Skill</a></li>
-          <li><a href="#kontak">Kontak</a></li>
-        </ul>
-      </nav>
-    </header>
-    <main>
-      <section id="hero" class="hero">
-        <img src="media/pp.webp" alt="Arjuna Arc pp" width="150px" height="150px"/>
-        <h2>Azqilana</h2>
-        <p>Mulai Aja Dulu</p>
-        <p id="hero_deskripsi">
-        Azqilana junior web developer membantu anda membuat website landing page atau company profile yang responsif dan ramah SEO.</p>
-      </section>
-      <section id="skill" class="skill">
-        <h2>Skill</h2>
-        <ul>
-          <li><a>HTML</a></li>
-          <li><a>CSS</a></li>
-          <li><a>Javascript</a></li>
-        </ul>
-      </section>
-      <section id="kontak" class="kontak">
-        <h2>Hubungi Saya</h2>
-        <form>
-            <label for="nama"></label>
-            <input type="text" name="nama" id="nama" placeholder=" Nama Anda" value=""/>
-            <input
-              type="email"
-              name="email"
-              id="email"
-              placeholder=" Emailanda@email.com"
-           value="" />
-            <textarea name="pesan" id="pesan" rows="5" cols="20"></textarea>
-            <div class="tombol">
-            <button id="whatsapp">WhatsApp</button>
-            <button id="kirim">Kirim</button>
-            </div>
-        </form>
-      </section>
-    </main>
-    <footer>&copy; Azqilana </footer>
-    <script src="index.js"></script>
-  </body>
+<body>
+<header>
+<div class="brand">
+<h1>Azqilana</h1>
+<p>
+Mulai aja dulu
+</p>
+</div>
+<button class="hamburger" id="hamburger">
+<span class="garis"></span>
+<span class="garis"></span>
+</button>
+<nav id="nav">
+<button id="tema">Gelap</button>
+<ul>
+<li><a href="#hero">Beranda</a></li>
+<li><a href="#skill">Skill</a></li>
+<li><a href="#kontak">Kontak</a></li>
+</ul>
+</nav>
+</header>
+<main>
+<section id="hero" class="hero">
+<img src="media/pp.webp" alt="Arjuna Arc pp" width="150px" height="150px" />
+<h2>Azqilana</h2>
+<p>
+Mulai Aja Dulu
+</p>
+<p id="hero_deskripsi">
+Azqilana junior web developer membantu anda membuat website landing page atau company profile yang responsif dan ramah SEO.
+</p>
+</section>
+<section id="skill" class="skill">
+<h2>Skill</h2>
+<ul>
+<li><a>HTML</a></li>
+<li><a>CSS</a></li>
+<li><a>Javascript</a></li>
+</ul>
+</section>
+<section id="kontak" class="kontak">
+<h2>Hubungi Saya</h2>
+<div class="sosmed">
+<h3>Sosial Media</h3>
+<div class="list-sosmed">
+<span class="icon link">
+<svg>
+<use id="li" class="li" href="media/icon/icons.svg#linkedin" />
+</svg>
+<a href="">LinkedIn</a>
+</span>
+<span class="icon git">
+<svg>
+<use class="git" href="media/icon/icons.svg#github" />
+</svg>
+<a href="">github</a>
+</span>
+</div>
+</div>
+<form>
+<h3>Form Chat</h3>
+<label for="nama"></label>
+<input type="text" name="nama" id="nama" placeholder=" Nama Anda" value="" />
+<input
+type="email"
+name="email"
+id="email"
+placeholder=" Emailanda@email.com"
+value="" />
+<textarea name="pesan" id="pesan" rows="5" cols="20"></textarea>
+<div class="tombol">
+<button id="whatsapp">WhatsApp</button>
+<button id="kirim">Kirim</button>
+</div>
+</form>
+</section>
+</main>
+<footer>
+&copy; Azqilana
+</footer>
+<script src="index.js"></script>
+</body>
 </html>
