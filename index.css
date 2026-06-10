@@ -83,6 +83,7 @@ nav ul {
   padding: 5px 10px;
   border-radius: 20px;
   border: var(--gaya-list-desktop);
+  background-color: var(--warna-utama);
 }
 nav ul li {
   border: var(--gaya-list-desktop);
