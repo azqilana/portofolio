@@ -15,15 +15,55 @@ hamenu.addEventListener("click", () => {
   }
 });
 const tema = document.querySelector("#tema")
-tema.addEventListener('click', () => {
-  if (document.documentElement.getAttribute('data-theme') === 'gelap') {
-    document.documentElement.removeAttribute('data-theme')
-    tema.textContent = "Gelap"
-  } else {
-    document.documentElement.setAttribute('data-theme', 'gelap')
-    tema.textContent = "Terang"
+class PengaturTema {
+  constructor(Tombol) {
+    this.tombol = Tombol
   }
-})
+
+  // 1. Fungsi untuk mengecek dan menerapkan tema saat pertama kali web dibuka
+  inisialisasi() {
+    // Cek apakah sistem perangkat user menggunakan Dark Mode
+    const perangkatModeGelap = window.matchMedia('(prefers-color-scheme: dark)').matches;
+
+    if (perangkatModeGelap) {
+      this.setModeGelap();
+    } else {
+      this.setModeTerang();
+    }
+
+    // Jalankan event listener klik tombol
+    this.tombol.addEventListener('click', () => this.handleKlik());
+  }
+
+  // 2. Fungsi untuk mengatur tampilan ke mode gelap
+  setModeGelap() {
+    document.documentElement.setAttribute('data-theme', 'gelap');
+    this.tombol.textContent = "Terang";
+    this.tombol.setAttribute('aria-label', 'tombol tema terang');
+  }
+
+  // 3. Fungsi untuk mengatur tampilan ke mode terang
+  setModeTerang() {
+    document.documentElement.removeAttribute('data-theme');
+    this.tombol.textContent = "Gelap";
+    this.tombol.setAttribute('aria-label', 'tombol tema gelap');
+  }
+
+  // 4. Logika ketika tombol tema diklik
+  handleKlik() {
+    const isGelap = document.documentElement.getAttribute('data-theme') === 'gelap';
+    if (isGelap) {
+      this.setModeTerang();
+    } else {
+      this.setModeGelap();
+    }
+  }
+}
+
+// --- CARA PAKAINYA ---
+// Buat objek baru dari class PengaturTema dan jalankan inisialisasi
+const temaAplikasi = new PengaturTema(tema);
+temaAplikasi.inisialisasi();
 document.addEventListener("click", (e) => {
   if (!nav.contains(e.target) && !hamenu.contains(e.target)) {
     nav.classList.remove("aktif");
