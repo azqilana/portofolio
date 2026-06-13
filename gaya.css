@@ -1,6 +1,6 @@
 :root {
   --warna-utama: #ffffff;
-  --warna-kedua: #2563eb;
+  --warna-kedua: #2BAF27;
   --warna-text: #111111;
   --blur: rgba(255, 255, 255, 0.8);
   --warna-border: #e0e0e0;
@@ -14,7 +14,7 @@
 
 [data-theme="gelap"] {
   --warna-utama: #0f0f0f;
-  --warna-kedua: #3b82f6;
+  --warna-kedua: #4BF660;
   --warna-text: #f5f5f5;
   --blur: rgba(0, 0, 0, 0.8);
   --warna-border: #2a2a2a;
