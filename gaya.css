@@ -4,6 +4,7 @@
   --warna-text: #111111;
   --blur: rgba(255, 255, 255, 0.8);
   --warna-border: #e0e0e0;
+  --tombol: black;
   --bayangan-atas: 0 -2px 10px var(--warna-kedua);
   --bayangan-bawah: 0 2px 10px var(--warna-border);
   --gaya-list: var(--bayangan-atas),var(--bayangan-bawah);
@@ -19,6 +20,7 @@
   --blur: rgba(0, 0, 0, 0.8);
   --warna-border: #2a2a2a;
   --hijau-wa: #1da851;
+  --tombol: grey;
 }
 * {
   margin: 0;
@@ -280,7 +282,7 @@ svg {
   gap: 10px;
 }
 button {
-  background-color: var(--warna-kedua);
+  background-color: var(--hijau-wa);
 }
 #whatsapp {
   background-color: var(--hijau-wa);
@@ -291,7 +293,7 @@ button {
   border-radius: 10px;
   padding: 10px;
   border: none;
-  box-shadow: var(--gaya-list);
+  color:;
 }
 footer {
   padding: 15px;

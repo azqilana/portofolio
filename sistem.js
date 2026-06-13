@@ -1,6 +1,10 @@
 const hamenu = document.querySelector("#hamburger");
 const nav = document.querySelector("#nav");
+console.log(document.querySelector("#nav"))
+console.log(document.querySelector("#hamburger"))
+hamenu.addEventListener("click", () => console.log("klik!"))
 hamenu.addEventListener("click", () => {
+  console.log(nav.classList.contains("aktif"))
   nav.classList.toggle("aktif");
   hamenu.classList.toggle("aktif");
 
@@ -11,6 +15,14 @@ hamenu.addEventListener("click", () => {
     nav.style.top = (hRect.bottom + 26) + "px";
   } else {
     nav.style.left = "";
+    nav.style.top = "";
+  }
+});
+document.addEventListener("click", (e) => {
+  if (!nav.contains(e.target) && !hamenu.contains(e.target)) {
+    nav.classList.remove("aktif");
+    hamenu.classList.remove("aktif");
+    nav.style.left = ""; // tambah ini
     nav.style.top = "";
   }
 });
@@ -64,12 +76,7 @@ class PengaturTema {
 // Buat objek baru dari class PengaturTema dan jalankan inisialisasi
 const temaAplikasi = new PengaturTema(tema);
 temaAplikasi.inisialisasi();
-document.addEventListener("click", (e) => {
-  if (!nav.contains(e.target) && !hamenu.contains(e.target)) {
-    nav.classList.remove("aktif");
-    hamenu.classList.remove("aktif");
-  }
-});
+
 const Wa = document.querySelector("#whatsapp")
 const kirim = document.querySelector('#kirim');
 class AksiForm {
