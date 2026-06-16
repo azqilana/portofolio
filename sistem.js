@@ -18,6 +18,7 @@ hamenu.addEventListener("click", () => {
     nav.style.top = "";
   }
 });
+// fhfjfj
 document.addEventListener("click", (e) => {
   if (!nav.contains(e.target) && !hamenu.contains(e.target)) {
     nav.classList.remove("aktif");
