@@ -1,4 +1,4 @@
 # Azqilana - Junior Web Developer
-Ini adalah website portofolio yang menjelaskan informasi data,resume,skill,dan projek dari pemilik website yaitu Azqilana.
+> Ini adalah website portofolio yang menjelaskan informasi data,resume,skill,dan projek dari pemilik website yaitu Azqilana.
 ## Informasi Utama
-- [/index.html]: Halaman utama portfolio yang berisi seluruh informasi tentang resume dan karya dari pemilik website yaitu Azqilana.
+- [Portofolio](https://azqilana.my.id/index.html): Halaman utama portfolio yang berisi seluruh informasi tentang resume dan karya dari pemilik website yaitu Azqilana.
