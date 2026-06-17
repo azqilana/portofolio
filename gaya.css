@@ -1,21 +1,21 @@
 :root {
   --warna-utama: #ffffff;
-  --warna-kedua: #2BAF27;
+  --warna-kedua: #2baf27;
   --warna-text: #111111;
   --blur: rgba(255, 255, 255, 0.8);
   --warna-border: #e0e0e0;
   --tombol: black;
   --bayangan-atas: 0 -2px 10px var(--warna-kedua);
   --bayangan-bawah: 0 2px 10px var(--warna-border);
-  --gaya-list: var(--bayangan-atas),var(--bayangan-bawah);
+  --gaya-list: var(--bayangan-atas), var(--bayangan-bawah);
   --gaya-list-desktop: 2px solid var(--warna-kedua);
-  --hijau-wa: #25D366;
+  --hijau-wa: #25d366;
   --biru-linkedin: #0077b5;
 }
 
 [data-theme="gelap"] {
   --warna-utama: #0f0f0f;
-  --warna-kedua: #4BF660;
+  --warna-kedua: #4bf660;
   --warna-text: #f5f5f5;
   --blur: rgba(0, 0, 0, 0.8);
   --warna-border: #2a2a2a;
@@ -40,21 +40,21 @@ body {
 }
 header {
   position: sticky;
-  padding: 15px;
-  margin: 10px;
-  border-radius: 10px;
+  padding: clamp(10px, 2vw, 20px);
+  margin: clamp(8px, 1.5vw, 15px);
+  border-radius: clamp(8px, 1.5vw, 12px);
   top: 2px;
   box-shadow: var(--gaya-list);
   z-index: 1;
   background-color: var(--warna-utama);
 }
 .brand {
-  margin: 5px auto;
-  padding: 5px;
+  margin: clamp(3px, 0.8vw, 8px) auto;
+  padding: clamp(3px, 0.8vw, 8px);
 }
 .brand h1 {
   font-weight: 900;
-  font-size: 30px;
+  font-size: clamp(24px, 4vw, 36px);
 }
 .brand p {
   font-weight: 600;
@@ -64,104 +64,106 @@ img {
 }
 nav {
   background-color: var(--warna-utama);
-  padding: 10px;
-  margin: 10px;
-  border-radius: 10px;
+  padding: clamp(6px, 1vw, 12px);
+  margin: clamp(8px, 1.5vw, 15px);
+  border-radius: clamp(8px, 1.5vw, 12px);
   box-shadow: var(--gaya-list);
   position: fixed;
-  width: 50vw;
-  height: 50vh;
+  width: max(45vw, 300px);
+  height: min(50vh, 450px);
   transition: 0.5s;
   left: 800px;
 }
 nav ul {
-  height: 46vh;
+  height: clamp(180px, 40vh, 400px);
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
 }
 #tema {
   font-weight: 900;
-  padding: 5px 10px;
-  border-radius: 20px;
+  padding: clamp(4px, 0.8vw, 10px) clamp(8px, 1.5vw, 12px);
+  border-radius: clamp(15px, 2.5vw, 25px);
   border: var(--gaya-list-desktop);
   background-color: var(--warna-text);
   color: var(--warna-utama);
 }
 nav ul li {
   border: var(--gaya-list-desktop);
-  padding: 10px;
-  border-radius: 10px;
-  margin: 10px;
+  padding: clamp(6px, 0.8vw, 10px);
+  border-radius: clamp(8px, 1.5vw, 12px);
+  margin: clamp(4px, 0.5vw, 8px);
   box-shadow: var(--gaya-list);
 }
 nav ul li a {
   font-weight: 900;
 }
 .garis {
+  position: relative;
+  left: 2px;
   display: block;
-  width: 30px;
-  padding: 3px;
-  margin: 3px;
+  width: clamp(25px, 5vw, 35px);
+  padding: clamp(2px, 0.4vw, 4px);
+  margin: clamp(2px, 0.4vw, 4px);
   background-color: var(--warna-utama);
-  border: 2px solid var(--warna-kedua);
-  border-radius: 10px;
+  border: max(2px, 0.3vw) solid var(--warna-kedua);
+  border-radius: clamp(8px, 1.5vw, 12px);
   transition: 0.4s;
 }
 .hamburger.aktif .garis {
   background-color: red;
-  height: 3px;
-  margin: 4px 0;
+  height: max(3px, 0.5vw);
+  margin: clamp(3px, 0.6vw, 5px) 0;
   padding: 0;
   border-color: red;
 }
 .hamburger.aktif {
-  padding-left: 5px;
+  padding-left: clamp(3px, 0.6vw, 6px);
 }
 .hamburger.aktif .garis:nth-child(1) {
-  transform: rotate(45deg) translate(3px, 3px);
+  transform: rotate(45deg) translate(2.5px, 2.5px);
 }
 .hamburger.aktif .garis:nth-child(2) {
-  transform: rotate(-45deg) translate(3px, -3px);
+  transform: rotate(-45deg) translate(2.5px, -2.5px);
 }
 .hamburger {
   position: absolute;
   background-color: rgba(0, 0, 0, 0);
-  top: 33px;
-  right: 10px;
-  padding-left: 2px;
-  width: 40px;
-  height: 40px;
+  top: clamp(30px, 6vw, 40px);
+  right: clamp(8px, 1.5vw, 15px);
+  padding-left: clamp(1px, 0.3vw, 3px);
+  width: clamp(35px, 8vw, 45px);
+  height: clamp(35px, 8vw, 45px);
   border: none;
-  border-radius: 10px;
+  border-radius: clamp(8px, 1.5vw, 12px);
   z-index: 1;
   box-shadow: var(--gaya-list);
 }
 section {
   box-shadow: var(--gaya-list);
-  border-radius: 10px;
-  padding: 10px;
-  margin: 10px;
+  border-radius: clamp(8px, 1.5vw, 12px);
+  padding: clamp(8px, 1.5vw, 15px);
+  margin: clamp(8px, 1.5vw, 15px);
   /* height:80vh; */
-  scroll-margin-top: 125px;
+  scroll-margin-top: clamp(100px, 15vh, 150px);
 }
 .hero {
-  margin-top: 20px;
-  padding: 60px 10px;
+  margin-top: clamp(15px, 3vw, 30px);
+  padding: clamp(40px, 8vw, 80px) clamp(8px, 1.5vw, 15px);
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
-  gap: 20px;
+  gap: clamp(15px, 3vw, 30px);
 }
 .hero h2 {
   color: var(--warna-kedua);
   font-weight: 900;
-  font-size: 3rem;
+  font-size: clamp(1.8rem, 6vw, 4rem);
 }
 .hero p {
   font-weight: 600;
-  font-size: 20px;
+  font-size: clamp(16px, 3vw, 24px);
 }
 #hero_deskripsi {
   text-align: justify;
@@ -170,12 +172,12 @@ section {
   width: 90%;
 }
 .skill {
-  padding: 40px 10px;
+  padding: clamp(30px, 6vw, 50px) clamp(8px, 1.5vw, 15px);
 }
 .skill h2 {
-  margin-bottom: 30px;
+  margin-bottom: clamp(20px, 4vw, 40px);
   font-weight: 900;
-  font-size: 25px;
+  font-size: clamp(20px, 4vw, 30px);
 }
 .skill ul {
   margin: 1px auto;
@@ -183,22 +185,22 @@ section {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
-  gap: 10px;
+  gap: clamp(8px, 1.5vw, 15px);
 }
 .skill ul li {
-  border-radius: 20px;
-  padding: 15%;
-  font-size: 20px;
+  border-radius: clamp(15px, 2.5vw, 25px);
+  padding: clamp(12%, 10vw, 18%);
+  font-size: clamp(18px, 3.5vw, 26px);
   color: var(--warna-text);
 }
 .skill ul li a {
   font-weight: 900;
   background-color: var(--warna-utama);
-  padding: 10px;
-  border-radius: 10px;
+  padding: clamp(8px, 1.5vw, 12px);
+  border-radius: clamp(8px, 1.5vw, 12px);
 }
 .skill ul li:nth-child(1) {
-  background-color: #E34C26;
+  background-color: #e34c26;
 }
 .skill ul li:nth-child(2) {
   background-color: rgb(38, 77, 228);
@@ -209,56 +211,57 @@ section {
 main {
   display: flex;
   flex-direction: column;
-  gap: 20px
+  gap: clamp(15px, 3vw, 30px);
 }
 .kontak {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 50px;
-  gap: 20px;
+  padding: clamp(30px, 6vw, 60px);
+  gap: clamp(15px, 3vw, 30px);
 }
 .kontak h2 {
   font-weight: 900;
-  font-size: 25px;
+  font-size: clamp(20px, 4vw, 30px);
 }
 .kontak form {
-  width: 90vw;
+  width: clamp(280px, 90vw, 600px);
   display: flex;
   flex-direction: column;
-  gap: 15px;
+  gap: clamp(12px, 2vw, 20px);
   box-shadow: var(--gaya-list);
-  padding: 20px;
-  border-radius: 10px;
+  padding: clamp(15px, 3vw, 30px);
+  border-radius: clamp(8px, 1.5vw, 12px);
 }
 .sosmed {
   display: flex;
   justify-content: center;
   flex-direction: column;
-  width: 90%;
-  gap: 10px;
+  width: clamp(280px, 90%, 550px);
+  gap: clamp(8px, 1.5vw, 15px);
   box-shadow: var(--gaya-list);
-  padding: 10px;
-  border-radius: 10px;
+  padding: clamp(8px, 1.5vw, 15px);
+  border-radius: clamp(8px, 1.5vw, 12px);
 }
 .list-sosmed {
   display: flex;
+  justify-content: space-evenly;
 }
 svg {
-  width: 90%;
+  width: min(90%, 200px);
 }
 .kontak .sosmed .icon a {
   position: relative;
-  bottom: 20px;
+  bottom: clamp(15px, 3vw, 25px);
 }
 .kontak form input {
-  padding: 10px;
-  border-radius: 20px;
+  padding: clamp(8px, 1.5vw, 15px);
+  border-radius: clamp(15px, 2.5vw, 25px);
   border: var(--gaya-list-desktop);
   box-shadow: var(--gaya-list);
   font-weight: 600;
-  font-size: 17px;
+  font-size: clamp(15px, 2.5vw, 18px);
   background-color: var(--blur);
 }
 .kontak form input:focus {
@@ -270,16 +273,16 @@ svg {
 .kontak form textarea {
   border: var(--gaya-list-desktop);
   box-shadow: var(--gaya-list);
-  border-radius: 10px;
+  border-radius: clamp(8px, 1.5vw, 12px);
   text-align: left;
-  padding: 15px;
+  padding: clamp(12px, 2vw, 18px);
   resize: none;
   background-color: var(--blur);
 }
 .kontak form .tombol {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 10px;
+  gap: clamp(8px, 1.5vw, 15px);
 }
 button {
   background-color: var(--hijau-wa);
@@ -287,24 +290,34 @@ button {
 #whatsapp {
   background-color: var(--hijau-wa);
 }
+.kontak .icon {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
 .kontak form .tombol button {
-  font-size: 20px;
+  font-size: clamp(16px, 2.5vw, 22px);
   font-weight: 900;
-  border-radius: 10px;
-  padding: 10px;
+  border-radius: clamp(8px, 1.5vw, 12px);
+  padding: clamp(8px, 1.5vw, 15px);
   border: none;
   color:;
 }
 footer {
-  padding: 15px;
-  margin: 10px;
-  border-radius: 10px;
+  padding: clamp(10px, 2vw, 20px);
+  margin: clamp(8px, 1.5vw, 15px);
+  border-radius: clamp(8px, 1.5vw, 12px);
   box-shadow: var(--gaya-list);
   z-index: 1;
   background-color: var(--warna-utama);
 }
 @media (min-width: 768px) {
-  header,footer,section,nav ul li {
+  header,
+  footer,
+  section,
+  nav ul li {
     box-shadow: none;
     border-width: 2px;
     /* atas kanan bawah kiri */
@@ -315,7 +328,7 @@ footer {
     margin-inline: 0px;
   }
   .hero h2 {
-    font-size: 8rem;
+    font-size: clamp(3rem, 8vw, 9rem);
     font-weight: 900;
   }
   .brand {
@@ -324,8 +337,8 @@ footer {
     justify-content: center;
   }
   img {
-    width: 225px;
-    height: 225px;
+    width: clamp(180px, 25vw, 250px);
+    height: clamp(180px, 25vw, 250px);
   }
   .brand h1 {
     position: relative;
@@ -341,7 +354,7 @@ footer {
     top: 0px;
     display: flex;
     flex-flow: row;
-    padding: 8px 15px;
+    padding: clamp(8px, 1.5vw, 15px);
     justify-content: space-evenly;
   }
   .hamburger {
@@ -353,7 +366,7 @@ footer {
     display: flex;
     height: auto;
     box-shadow: none;
-    gap: 10px;
+    gap: clamp(8px, 1.5vw, 12px);
     justify-content: space-between;
   }
   nav ul {
@@ -366,53 +379,53 @@ footer {
   nav ul li {
     box-shadow: none;
     min-width: 10%;
-    padding: 15px;
+    padding: clamp(12px, 2vw, 18px);
     margin: 0;
-    border-radius: 10px;
+    border-radius: clamp(8px, 1.5vw, 12px);
     border: var(--gaya-list-desktop);
   }
   #tema {
     position: relative;
     order: 2;
     left: 1.8em;
-    border-radius: 10px;
+    border-radius: clamp(8px, 1.5vw, 12px);
   }
   section {
-    scroll-margin-top: 160px;
+    scroll-margin-top: clamp(140px, 20vh, 180px);
   }
   #hero_deskripsi {
-    width: 40%;
+    width: clamp(35%, 45vw, 55%);
   }
   .skill ul {
     flex-direction: row;
     justify-content: space-evenly !important;
-    max-width: 90%;
-    gap: 15px
+    max-width: 95%;
+    gap: clamp(12px, 2vw, 20px);
   }
 
   .skill ul li {
-    width: 30%;
+    width: clamp(25%, 30vw, 35%);
     aspect-ratio: 1/1;
     flex: 1;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 3em;
+    font-size: clamp(2.5em, 4vw, 3.5em);
   }
   .kontak .sosmed {
-    width: 60%;
-    padding: 30px;
+    width: clamp(55%, 60vw, 70%);
+    padding: clamp(20px, 3vw, 40px);
     box-shadow: none;
     border: var(--gaya-list-desktop);
   }
   .kontak form {
-    width: 70%;
-    padding: 30px;
+    width: clamp(65%, 70vw, 80%);
+    padding: clamp(20px, 3vw, 40px);
     box-shadow: none;
     border: var(--gaya-list-desktop);
   }
   .kontak form input {
-    border-radius: 10px;
+    border-radius: clamp(8px, 1.5vw, 12px);
     box-shadow: none;
     border: var(--gaya-list-desktop);
   }
