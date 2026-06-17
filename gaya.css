@@ -1,6 +1,6 @@
 :root {
   --warna-utama: #ffffff;
-  --warna-kedua: #2baf27;
+  --warna-kedua: #1c6719;
   --warna-text: #111111;
   --blur: rgba(255, 255, 255, 0.8);
   --warna-border: #e0e0e0;
@@ -69,7 +69,7 @@ nav {
   border-radius: clamp(8px, 1.5vw, 12px);
   box-shadow: var(--gaya-list);
   position: fixed;
-  width: max(45vw, 300px);
+  width: clamp(150px, 70vw, 600px);
   height: min(50vh, 450px);
   transition: 0.5s;
   left: 800px;
