@@ -143,16 +143,18 @@ class AksiForm {
       .catch(() => alert("Gagal kirim"));
   }
 }
-const Af = new AksiForm();
-Wa.addEventListener("click", (e) => {
-  e.preventDefault();
-  Af.ambilIsi();
-  if (!Af.filter()) return;
-  Af.kirimWhatsApp();
-});
-kirim.addEventListener("click", (e) => {
-  e.preventDefault();
-  Af.ambilIsi();
-  if (!Af.filter()) return;
-  Af.kirimSheet();
-});
+if (Wa && kirim) {
+  const Af = new AksiForm();
+  Wa.addEventListener("click", (e) => {
+    e.preventDefault();
+    Af.ambilIsi();
+    if (!Af.filter()) return;
+    Af.kirimWhatsApp();
+  });
+  kirim.addEventListener("click", (e) => {
+    e.preventDefault();
+    Af.ambilIsi();
+    if (!Af.filter()) return;
+    Af.kirimSheet();
+  });
+}
