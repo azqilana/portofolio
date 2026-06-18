@@ -1,3 +1,5 @@
+import loading from "/sistem/app.js";
+loading();
 const hamenu = document.querySelector("#hamburger");
 const nav = document.querySelector("#nav");
 
