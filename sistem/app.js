@@ -1,7 +1,7 @@
 import kelolaRute from "./kelola.js";
 export default function loading() {
   const kR = new kelolaRute();
-  const dataM = document.querySelector("data-main");
+  const dataM = document.querySelector("#data-main");
   const main = document.createElement("main");
   document.addEventListener("click", async (e) => {
     const el = e.target.closest("a");
