@@ -1,0 +1,18 @@
+{
+  "/index.html": {
+    "html": "beranda.html",
+    "css": "gaya.css",
+    "js": "script.js"
+  },
+  "/": {
+    "html": "beranda.html",
+    "css": "gaya.css",
+    "js": "script.js"
+  },
+  "/kontak": {
+    "html": "kontak.html"
+  },
+  "/skill": {
+    "html": "skill.html"
+  }
+}

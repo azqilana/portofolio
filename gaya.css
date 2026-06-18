@@ -96,6 +96,9 @@ nav ul li {
   box-shadow: var(--gaya-list);
 }
 nav ul li a {
+  display: inline-block;
+  width: 99%;
+  font-size: 1rem;
   font-weight: 900;
 }
 .garis {
@@ -140,11 +143,11 @@ nav ul li a {
   box-shadow: var(--gaya-list);
 }
 section {
+  height: auto;
   box-shadow: var(--gaya-list);
   border-radius: clamp(8px, 1.5vw, 12px);
   padding: clamp(8px, 1.5vw, 15px);
   margin: clamp(8px, 1.5vw, 15px);
-  /* height:80vh; */
   scroll-margin-top: clamp(100px, 15vh, 150px);
 }
 .hero {
@@ -172,6 +175,7 @@ section {
   width: 90%;
 }
 .skill {
+  height: auto;
   padding: clamp(30px, 6vw, 50px) clamp(8px, 1.5vw, 15px);
 }
 .skill h2 {
@@ -218,6 +222,7 @@ main {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  height: auto;
   padding: clamp(30px, 6vw, 60px);
   gap: clamp(15px, 3vw, 30px);
 }
@@ -238,7 +243,7 @@ main {
   display: flex;
   justify-content: center;
   flex-direction: column;
-  width: clamp(280px, 90%, 550px);
+  width: clamp(80%, 90%, 550px);
   gap: clamp(8px, 1.5vw, 15px);
   box-shadow: var(--gaya-list);
   padding: clamp(8px, 1.5vw, 15px);
@@ -327,6 +332,9 @@ footer {
     border-radius: 0;
     margin-inline: 0px;
   }
+  .hero {
+    justify-content: center;
+  }
   .hero h2 {
     font-size: clamp(3rem, 8vw, 9rem);
     font-weight: 900;
@@ -397,15 +405,12 @@ footer {
     width: clamp(35%, 45vw, 55%);
   }
   .skill ul {
-    flex-direction: row;
     justify-content: space-evenly !important;
     max-width: 95%;
     gap: clamp(12px, 2vw, 20px);
   }
 
   .skill ul li {
-    width: clamp(25%, 30vw, 35%);
-    aspect-ratio: 1/1;
     flex: 1;
     display: flex;
     align-items: center;
