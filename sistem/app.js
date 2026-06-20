@@ -1,5 +1,4 @@
 import kelolaRute from "./kelola.js";
-export default function loading() {
   const kR = new kelolaRute();
   const dataM = document.querySelector("#data-main");
   const main = document.createElement("main");
@@ -35,4 +34,10 @@ export default function loading() {
     main.innerHTML = hasilRute;
     dataM.replaceWith(main);
   });
+export function jalankan(element,script) {
+  if (element) {
+    script()
+  }else{
+    console.log("Element belum ada")
+    }
 }

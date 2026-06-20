@@ -1,5 +1,4 @@
-import loading from "/sistem/app.js";
-loading();
+import {jalankan} from  "/sistem/app.js";
 const hamenu = document.querySelector("#hamburger");
 const nav = document.querySelector("#nav");
 
@@ -145,8 +144,10 @@ class AksiForm {
       .catch(() => alert("Gagal kirim"));
   }
 }
-if (Wa && kirim) {
+
   const Af = new AksiForm();
+const element= Wa&&kirim
+jalankan(element,()=>{
   Wa.addEventListener("click", (e) => {
     e.preventDefault();
     Af.ambilIsi();
@@ -159,4 +160,5 @@ if (Wa && kirim) {
     if (!Af.filter()) return;
     Af.kirimSheet();
   });
-}
+})
+
