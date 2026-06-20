@@ -145,9 +145,9 @@ class AksiForm {
   }
 }
 
-  const Af = new AksiForm();
 const element= Wa&&kirim
 jalankan(element,()=>{
+  const Af = new AksiForm();
   Wa.addEventListener("click", (e) => {
     e.preventDefault();
     Af.ambilIsi();
