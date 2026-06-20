@@ -82,6 +82,8 @@ temaAplikasi.inisialisasi();
 
 const Wa = document.querySelector("#whatsapp");
 const kirim = document.querySelector("#kirim");
+const element= Wa&&kirim
+if (element) {
 class AksiForm {
   constructor() {
     this.namaInput = document.querySelector("#nama");
@@ -144,9 +146,6 @@ class AksiForm {
       .catch(() => alert("Gagal kirim"));
   }
 }
-
-const element= Wa&&kirim
-if (element) {
   const Af = new AksiForm();
   Wa.addEventListener("click", (e) => {
     e.preventDefault();
