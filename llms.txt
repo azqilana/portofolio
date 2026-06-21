@@ -2,5 +2,3 @@
 > Ini adalah website portofolio yang menjelaskan informasi data,resume,skill,dan projek dari pemilik website yaitu Azqilana.
 ## Informasi Utama
 - [Beranda](https://azqilana.my.id/index.html): Halaman utama portfolio yang berisi ringkasan informasi atau headline pemilik website yaitu Azqilana.
-- [Skill](https://azqilana.my.id/skill): Halaman yang berisi ringkasan informasi Keahlian atau Skill pemilik website yaitu Azqilana.
-- [Kontak](https://azqilana.my.id/kontak): Halaman yang berisi informasi cara menghubungi pemilik website yaitu Azqilana.
