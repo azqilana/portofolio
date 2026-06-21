@@ -59,6 +59,12 @@
     border-radius: 2px;
     transition: 0.3s;
   }
+  #tema {
+    position: absolute;
+    right: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
 
   .nav-menu {
     position: fixed;
@@ -116,9 +122,6 @@
   .nav-desktop li:hover {
     color: #2255dd;
   }
-  #tema {
-    display: none;
-  }
 
   @media (min-width: 769px) {
     body {
@@ -138,7 +141,8 @@
       display: flex;
     }
     #tema {
-      display: inline-block;
+      position: static;
+      transform: none;
     }
     .menu-btn,
     .nav-menu {
@@ -153,11 +157,6 @@
       max-width: 90%;
       width: 90%;
       margin: 0 auto 20px auto;
-    }
-    #hero_deskripsi {
-      max-width: 480px;
-      margin: 16px auto 0 auto;
-      text-align: justify;
     }
   }
 
@@ -195,6 +194,13 @@
   }
   html[data-theme="gelap"] #hero_deskripsi {
     color: #ccc;
+  }
+  @media (min-width: 769px) {
+    #hero_deskripsi {
+      max-width: 480px;
+      margin: 16px auto 0 auto;
+      text-align: justify;
+    }
   }
 
   /* Skill section */
@@ -415,6 +421,7 @@
 
   <!-- Contact -->
   <div class="card" id="contact">
+    <h2>Kontak</h2>
     <div class="sosmed-section">
       <h2>Sosial Media</h2>
       <div class="sosmed-row">
