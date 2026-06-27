@@ -3,7 +3,16 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Azqilana</title>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <meta name="robots" content="index,follow" />
+    <meta name="author" content="azqilana" />
+    <meta property="og:title" content="" />
+    <meta property="og:description" content="" />
+    <meta property="og:image" content="" />
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+<title>Azqilana - Junior Web Developer</title>
 <style>
   * { box-sizing: border-box; }
   body {
@@ -80,12 +89,14 @@
   }
   .menu-btn.aktif div:nth-child(1) {
     transform: translateY(6px) rotate(45deg);
+    background-color: red;
   }
   .menu-btn.aktif div:nth-child(2) {
     opacity: 0;
   }
   .menu-btn.aktif div:nth-child(3) {
     transform: translateY(-6px) rotate(-45deg);
+    background-color: red;
   }
   .nav-menu ul {
     list-style: none;
@@ -187,6 +198,7 @@
     margin: 16px auto 0 auto;
     max-width: 90%;
     text-align: justify;
+    text-indent: 20px;
   }
   #home {
     padding-top: clamp(24px, 5vw, 60px);
@@ -221,6 +233,7 @@
   .skill-html { background: #e8491d; }
   .skill-css  { background: #2a3fd6; color: #fff; }
   .skill-js   { background: #f0db4f; }
+  .skill-react { background: #61dafb; color: #1a1a1a; }
 
   /* Contact section */
   .contact-input,
@@ -390,7 +403,7 @@
     </div>
   </div>
 
-  <!-- Nav Menu (mobile dropdown) -->
+  <!-- Nav Menu (mobile dropdown) --!>
   <div class="nav-menu" id="nav">
     <ul>
       <li onclick="scrollToSection('home')">Home</li>
@@ -417,6 +430,7 @@
     <div class="skill-box skill-html">HTML</div>
     <div class="skill-box skill-css">CSS</div>
     <div class="skill-box skill-js">Javascript</div>
+    <div class="skill-box skill-react">React</div>
   </div>
 
   <!-- Contact -->
