@@ -1,0 +1,27 @@
+{
+  "/": {
+    "title": "Beranda",
+    "page": "beranda",
+    "style": "styleberanda"
+  },
+  "/skill": {
+    "title": "Skill",
+    "page": "skill",
+    "style": "styleskill"
+  },
+  "/karya": {
+    "title": "Karya",
+    "page": "karya",
+    "style": "stylekarya"
+  },
+  "/kontak": {
+    "title": "Kontak",
+    "page": "kontak",
+    "style": "stylekontak"
+  },
+  "/404": {
+    "title": "Page Not Found",
+    "page": "404",
+    "style": "404style"
+  }
+}
