@@ -3,188 +3,943 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Azqilana</title>
-    <link rel="icon" href="./media/favicon.webp" type="image/webp" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <style id="global-style">
-      *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-      :root {
-        --bg: #1a1a2e;
-        --bg-card: #22223b;
-        --bg-input: #2a2a40;
-        --text: #f0f0f0;
-        --text-muted: #a0a0b0;
-        --accent-blue: #4361ee;
-        --accent-green: #4ade80;
-        --border: #33334a;
-        --navbar-h: 64px;
-      }
-      body.light {
-        --bg: #f0f4ff;
-        --bg-card: #ffffff;
-        --bg-input: #e8edf5;
-        --text: #1a1a2e;
-        --text-muted: #555577;
-        --border: #d0d4e8;
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <meta name="robots" content="index,follow" />
+    <meta name="author" content="azqilana" />
+    <meta property="og:title" content="Azqilana | Junior Web Developer" />
+    <meta property="og:description" content="" />
+    <meta property="og:image" content="pp.png" />
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
+    <title>Azqilana - Junior Web Developer</title>
+    <style>
+      * {
+        box-sizing: border-box;
       }
       body {
-        background: var(--bg);
-        color: var(--text);
-        font-family: 'Inter', sans-serif;
-        min-height: 100vh;
+        margin: 0;
+        font-family: "Segoe UI", Arial, sans-serif;
+        background: #eef1f7;
+        padding: 20px 12px;
       }
 
-      /* NAVBAR */
-      .navbar {
-        position: sticky;
-        top: 0;
-        z-index: 100;
+      .card {
+        background: #fff;
+        border-radius: 18px;
+        box-shadow: 0 0 15px rgba(80, 100, 220, 0.35);
+        max-width: 480px;
+        margin: 0 auto 20px auto;
+        padding: 24px;
+        text-align: center;
+      }
+
+      /* Header */
+      .header {
         display: flex;
         align-items: center;
-        justify-content: space-between;
-        padding: 0 16px;
-        height: var(--navbar-h);
-        background: var(--bg-card);
-        border-bottom: 1px solid var(--border);
+        justify-content: center;
+        position: relative;
       }
-      .nav-menu-btn {
-        background: var(--bg-input);
-        border: none;
-        color: var(--text);
-        font-size: 1.3rem;
-        width: 42px;
-        height: 42px;
-        border-radius: 10px;
+      .header h1 {
+        margin: 0;
+        font-size: 32px;
+        font-weight: 600;
+        color: #222;
+      }
+      .header p {
+        margin: 4px 0 0 0;
+        color: #555;
+        font-size: 16px;
+      }
+      .menu-btn {
+        position: absolute;
+        left: 16px;
+        top: 50%;
+        transform: translateY(-50%);
+        background: #f3f3f3;
+        border-radius: 12px;
+        padding: 10px 12px;
         cursor: pointer;
       }
-      .nav-title {
-        font-size: 1.2rem;
-        font-weight: 700;
-        color: var(--text);
+      .menu-btn div {
+        width: 22px;
+        height: 3px;
+        background: #999;
+        margin: 3px 0;
+        border-radius: 2px;
+        transition: 0.3s;
       }
-      .nav-theme-btn {
-        background: var(--bg-input);
-        border: none;
-        color: var(--text);
-        font-size: 0.85rem;
-        padding: 8px 16px;
-        border-radius: 20px;
-        cursor: pointer;
-        font-weight: 500;
+      #tema {
+        position: absolute;
+        right: 16px;
+        top: 50%;
+        transform: translateY(-50%);
       }
 
-      /* SIDEBAR */
-      .sidebar-overlay {
+      .nav-menu {
+        position: fixed;
         display: none;
-        position: fixed;
-        inset: 0;
-        background: rgba(0,0,0,0.5);
-        z-index: 200;
+        background: #fff;
+        border-radius: 12px;
+        width: 200px;
+        z-index: 100;
       }
-      .sidebar-overlay.active { display: block; }
-      .sidebar {
-        position: fixed;
-        top: 0;
-        left: -260px;
-        width: 240px;
-        height: 100vh;
-        background: var(--bg-card);
-        z-index: 300;
-        padding: 32px 20px;
-        transition: left 0.3s ease;
-        border-right: 1px solid var(--border);
-      }
-      .sidebar.active { left: 0; }
-      .sidebar ul {
-        list-style: none;
-        display: flex;
-        flex-direction: column;
-        gap: 8px;
-        margin-top: 24px;
-      }
-      .sidebar ul li a {
+      .nav-menu.aktif {
         display: block;
-        padding: 12px 16px;
-        color: var(--text);
-        text-decoration: none;
-        border-radius: 10px;
-        font-weight: 500;
-        transition: background 0.2s;
+        box-shadow: 0 0 15px rgba(80, 100, 220, 0.35);
       }
-      .sidebar ul li a:hover { background: var(--bg-input); }
-      .sidebar ul li a.active-link {
-        background: var(--accent-blue);
+      .menu-btn.aktif div:nth-child(1) {
+        transform: translateY(6px) rotate(45deg);
+        background-color: red;
+      }
+      .menu-btn.aktif div:nth-child(2) {
+        opacity: 0;
+      }
+      .menu-btn.aktif div:nth-child(3) {
+        transform: translateY(-6px) rotate(-45deg);
+        background-color: red;
+      }
+      .nav-menu ul {
+        list-style: none;
+        margin: 0;
+        padding: 10px 0;
+      }
+      .nav-menu li {
+        padding: 14px 24px;
+        text-align: left;
+        font-size: 17px;
+        border-bottom: 1px solid #eee;
+        cursor: pointer;
+      }
+      .nav-menu li:last-child {
+        border-bottom: none;
+      }
+      .nav-menu li:hover {
+        background: #f5f5f5;
+      }
+
+      /* Desktop nav (hidden on mobile by default) */
+      .nav-desktop {
+        display: none;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        gap: 24px;
+      }
+      .nav-desktop li {
+        cursor: pointer;
+        font-size: 16px;
+        color: #222;
+      }
+      .nav-desktop li:hover {
+        color: #2255dd;
+      }
+
+      @media (min-width: 769px) {
+        body {
+          padding: 24px 40px;
+        }
+        .header {
+          max-width: 100%;
+          display: flex;
+          justify-content: space-evenly;
+          align-items: center;
+          position: static;
+        }
+        .header .logo {
+          text-align: left;
+        }
+        .nav-desktop {
+          display: flex;
+        }
+        #tema {
+          position: static;
+          transform: none;
+        }
+        .menu-btn,
+        .nav-menu {
+          display: none !important;
+        }
+
+        .content-wrap {
+          max-width: 100%;
+          margin: 0;
+        }
+        .content-wrap .card {
+          max-width: 90%;
+          width: 90%;
+          margin: 0 auto 20px auto;
+        }
+      }
+
+      /* Profile */
+      .profile-pic {
+        width: 130px;
+        height: 130px;
+        border-radius: 50%;
+        object-fit: cover;
+        background: #6fae8f;
+        margin-bottom: 14px;
+      }
+      .profile-name {
+        color: #2255dd;
+        font-size: 30px;
+        font-weight: 700;
+        margin: 6px 0 2px 0;
+      }
+      .profile-tagline {
+        color: #333;
+        font-size: 16px;
+        margin: 0;
+      }
+      #hero_deskripsi {
+        color: #444;
+        font-size: clamp(14px, 2.2vw, 18px);
+        line-height: 1.6;
+        margin: 16px auto 0 auto;
+        max-width: 90%;
+        text-align: justify;
+        text-indent: 20px;
+      }
+      #home {
+        padding-top: clamp(24px, 5vw, 60px);
+        padding-bottom: clamp(24px, 5vw, 60px);
+      }
+      html[data-theme="gelap"] #hero_deskripsi {
+        color: #ccc;
+      }
+      @media (min-width: 769px) {
+        #hero_deskripsi {
+          max-width: 480px;
+          margin: 16px auto 0 auto;
+          text-align: justify;
+        }
+      }
+
+      /* Skill section */
+      .card h2 {
+        font-size: 26px;
+        font-weight: 600;
+        margin: 0 0 18px 0;
+        color: #222;
+      }
+      .skill-box {
+        border-radius: 12px;
+        padding: 22px 0;
+        margin-bottom: 16px;
+        font-size: 20px;
+        font-weight: 500;
+        color: #1a1a1a;
+      }
+      .skill-html {
+        background: #e8491d;
+      }
+      .skill-css {
+        background: #2a3fd6;
         color: #fff;
       }
+      .skill-js {
+        background: #f0db4f;
+      }
+      .skill-react {
+        background: #61dafb;
+        color: #1a1a1a;
+      }
+      .skill-nodejs {
+        background: #3c873a;
+        color: #fff;
+      }
+
+      /* Contact section */
+      .contact-input,
+      .contact-textarea {
+        width: 100%;
+        border: 1px solid #c9d6ff;
+        border-radius: 25px;
+        padding: 14px 18px;
+        font-size: 15px;
+        margin-bottom: 14px;
+        outline: none;
+        font-family: inherit;
+      }
+      .contact-textarea {
+        border-radius: 16px;
+        resize: vertical;
+        min-height: 100px;
+      }
+
+      .btn-row {
+        display: flex;
+        gap: 12px;
+      }
+      .btn-row button {
+        flex: 1;
+        padding: 14px 0;
+        border: none;
+        border-radius: 10px;
+        font-size: 16px;
+        font-weight: 500;
+        cursor: pointer;
+      }
+      .btn-whatsapp {
+        background: #2ecc40;
+        color: #fff;
+      }
+      .btn-kirim {
+        background: #2a3fd6;
+        color: #fff;
+      }
+      .btn-row button:hover {
+        opacity: 0.9;
+      }
+
+      /* Dark mode */
+      html[data-theme="gelap"] body {
+        background: #14161f;
+      }
+      html[data-theme="gelap"] .card,
+      html[data-theme="gelap"] .nav-menu {
+        background: #1f2330;
+        box-shadow: 0 0 15px rgba(80, 100, 220, 0.15);
+      }
+      html[data-theme="gelap"] .header h1,
+      html[data-theme="gelap"] .card h2,
+      html[data-theme="gelap"] .profile-tagline,
+      html[data-theme="gelap"] .nav-menu li {
+        color: #f0f0f0;
+      }
+      html[data-theme="gelap"] .header p {
+        color: #aaa;
+      }
+      html[data-theme="gelap"] .nav-desktop li {
+        color: #f0f0f0;
+      }
+      html[data-theme="gelap"] .nav-menu li:hover {
+        background: #2a2f40;
+      }
+      html[data-theme="gelap"] .nav-menu li {
+        border-bottom-color: #333;
+      }
+      html[data-theme="gelap"] .contact-input,
+      html[data-theme="gelap"] .contact-textarea {
+        background: #2a2f40;
+        border-color: #3a4060;
+        color: #fff;
+      }
+      html[data-theme="gelap"] #tema {
+        background: #2a2f40;
+        color: #fff;
+      }
+      #tema {
+        margin-right: 8px;
+        border: none;
+        background: #f3f3f3;
+        border-radius: 10px;
+        padding: 8px 14px;
+        cursor: pointer;
+      }
+
+      /* Sosmed */
+      .sosmed-row {
+        display: flex;
+        justify-content: center;
+        gap: 24px;
+      }
+      .sosmed-link {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 8px;
+        text-decoration: none;
+        color: #222;
+        font-size: 14px;
+      }
+      .sosmed-icon {
+        width: 56px;
+        height: 56px;
+        border-radius: 50%;
+        background: #f3f3f3;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: 0.2s;
+      }
+      .sosmed-icon svg {
+        width: 28px;
+        height: 28px;
+      }
+      .sosmed-link:hover .sosmed-icon {
+        background: #e4e8ff;
+        transform: translateY(-3px);
+      }
+      html[data-theme="gelap"] .sosmed-icon {
+        background: #2a2f40;
+      }
+      html[data-theme="gelap"] .sosmed-link {
+        color: #f0f0f0;
+      }
+      .sosmed-section,
+      .form-section {
+        border: 2px solid #e0e0e0;
+        border-radius: 14px;
+        padding: 20px;
+      }
+      .sosmed-section {
+        margin-bottom: 24px;
+      }
+      html[data-theme="gelap"] .sosmed-section,
+      html[data-theme="gelap"] .form-section {
+        border-color: #333;
+      }
+
+      /* Karya / Portofolio */
+      .karya-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 16px;
+        margin-top: 4px;
+      }
+      @media (max-width: 480px) {
+        .karya-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+      .karya-item {
+        border-radius: 14px;
+        overflow: hidden;
+        background: #f3f5ff;
+        box-shadow: 0 2px 10px rgba(80, 100, 220, 0.1);
+        text-decoration: none;
+        color: inherit;
+        display: flex;
+        flex-direction: column;
+        transition:
+          transform 0.18s,
+          box-shadow 0.18s;
+        cursor: pointer;
+      }
+      .karya-item.tema-mathnote {
+        background: #f5ede0;
+        border: 2px solid #6b3f1a;
+      }
+      .karya-item.tema-darbom {
+        background: #e8f5e2;
+        border: 2px solid #b8960a;
+      }
+      html[data-theme="gelap"] .karya-item.tema-mathnote {
+        background: #3d2410;
+        border-color: #a0622a;
+      }
+      html[data-theme="gelap"] .karya-item.tema-darbom {
+        background: #1a3312;
+        border-color: #c9a80e;
+      }
+      .karya-item:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 6px 20px rgba(80, 100, 220, 0.22);
+      }
+      .karya-img {
+        width: 100%;
+        height: 160px;
+        object-fit: cover;
+        background: #c9d6ff;
+        display: block;
+      }
+      .karya-img-placeholder {
+        width: 100%;
+        aspect-ratio: 16/9;
+        background: linear-gradient(135deg, #c9d6ff 0%, #a0b4ff 100%);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 36px;
+      }
+      .karya-info {
+        padding: 12px 14px 14px 14px;
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        text-align: left;
+      }
+      .karya-judul {
+        font-size: 15px;
+        font-weight: 700;
+        color: #2255dd;
+        margin: 0 0 4px 0;
+      }
+      .karya-desc {
+        font-size: 13px;
+        color: #555;
+        margin: 0 0 10px 0;
+        line-height: 1.5;
+        flex: 1;
+      }
+      .karya-links {
+        display: flex;
+        gap: 10px;
+        margin-top: 4px;
+      }
+      .karya-github,
+      .karya-demo {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        font-size: 13px;
+        font-weight: 500;
+        text-decoration: none;
+        padding: 5px 10px;
+        border-radius: 8px;
+      }
+      .karya-github {
+        color: #2255dd;
+        background: #e8eeff;
+      }
+      .karya-demo {
+        color: #fff;
+        background: #2255dd;
+      }
+      .karya-github:hover {
+        background: #d0d8ff;
+      }
+      .karya-demo:hover {
+        background: #1a44bb;
+      }
+      .karya-github svg {
+        width: 16px;
+        height: 16px;
+      }
+      .karya-item.tema-mathnote .karya-github {
+        background: #e8d5b8;
+        color: #6b3f1a;
+      }
+      .karya-item.tema-mathnote .karya-github:hover {
+        background: #d9c4a0;
+      }
+      .karya-item.tema-mathnote .karya-demo {
+        background: #8b5e2e;
+        color: #fff;
+      }
+      .karya-item.tema-mathnote .karya-demo:hover {
+        background: #6b3f1a;
+      }
+      .karya-item.tema-mathnote .karya-judul {
+        color: #6b3f1a;
+      }
+
+      .karya-item.tema-darbom .karya-github {
+        background: #c6e8b8;
+        color: #1e5c10;
+      }
+      .karya-item.tema-darbom .karya-github:hover {
+        background: #b0d9a0;
+      }
+      .karya-item.tema-darbom .karya-demo {
+        background: #b8960a;
+        color: #fff;
+      }
+      .karya-item.tema-darbom .karya-demo:hover {
+        background: #8f7208;
+      }
+      .karya-item.tema-darbom .karya-judul {
+        color: #1e5c10;
+      }
+
+      html[data-theme="gelap"] .karya-item.tema-mathnote .karya-judul {
+        color: #d4a96a;
+      }
+      html[data-theme="gelap"] .karya-item.tema-darbom .karya-judul {
+        color: #7fc86a;
+      }
+      html[data-theme="gelap"] .karya-judul {
+        color: #7fa0ff;
+      }
+      html[data-theme="gelap"] .karya-desc {
+        color: #aaa;
+      }
+      html[data-theme="gelap"] .karya-github {
+        color: #7fa0ff;
+        background: #1e2440;
+      }
+      html[data-theme="gelap"] .karya-demo {
+        background: #3355ee;
+      }
     </style>
-    <style id="page-style"></style>
   </head>
   <body>
+    <!-- SVG Sprite -->
+    <svg xmlns="http://www.w3.org/2000/svg" style="display: none">
+      <symbol id="linkedin" viewBox="0 0 640 640">
+        <path
+          fill="#0077b5"
+          d="M196.3 512L103.4 512L103.4 212.9L196.3 212.9L196.3 512zM149.8 172.1C120.1 172.1 96 147.5 96 117.8C96 103.5 101.7 89.9 111.8 79.8C121.9 69.7 135.6 64 149.8 64C164 64 177.7 69.7 187.8 79.8C197.9 89.9 203.6 103.6 203.6 117.8C203.6 147.5 179.5 172.1 149.8 172.1zM543.9 512L451.2 512L451.2 366.4C451.2 331.7 450.5 287.2 402.9 287.2C354.6 287.2 347.2 324.9 347.2 363.9L347.2 512L254.4 512L254.4 212.9L343.5 212.9L343.5 253.7L344.8 253.7C357.2 230.2 387.5 205.4 432.7 205.4C526.7 205.4 544 267.3 544 347.7L544 512L543.9 512z"
+        />
+      </symbol>
+      <symbol id="github" viewBox="0 0 640 640">
+        <path
+          fill="currentColor"
+          d="M237.9 461.4C237.9 463.4 235.6 465 232.7 465C229.4 465.3 227.1 463.7 227.1 461.4C227.1 459.4 229.4 457.8 232.3 457.8C235.3 457.5 237.9 459.1 237.9 461.4zM206.8 456.9C206.1 458.9 208.1 461.2 211.1 461.8C213.7 462.8 216.7 461.8 217.3 459.8C217.9 457.8 216 455.5 213 454.6C210.4 453.9 207.5 454.9 206.8 456.9zM251 455.2C248.1 455.9 246.1 457.8 246.4 460.1C246.7 462.1 249.3 463.4 252.3 462.7C255.2 462 257.2 460.1 256.9 458.1C256.6 456.2 253.9 454.9 251 455.2zM316.8 72C178.1 72 72 177.3 72 316C72 426.9 141.8 521.8 241.5 555.2C254.3 557.5 258.8 549.6 258.8 543.1C258.8 536.9 258.5 502.7 258.5 481.7C258.5 481.7 188.5 496.7 173.8 451.9C173.8 451.9 162.4 422.8 146 415.3C146 415.3 123.1 399.6 147.6 399.9C147.6 399.9 172.5 401.9 186.2 425.7C208.1 464.3 244.8 453.2 259.1 446.6C261.4 430.6 267.9 419.5 275.1 412.9C219.2 406.7 162.8 398.6 162.8 302.4C162.8 274.9 170.4 261.1 186.4 243.5C183.8 237 175.3 210.2 189 175.6C209.9 169.1 258 202.6 258 202.6C278 197 299.5 194.1 320.8 194.1C342.1 194.1 363.6 197 383.6 202.6C383.6 202.6 431.7 169 452.6 175.6C466.3 210.3 457.8 237 455.2 243.5C471.2 261.2 481 275 481 302.4C481 398.9 422.1 406.6 366.2 412.9C375.4 420.8 383.2 435.8 383.2 459.3C383.2 493 382.9 534.7 382.9 542.9C382.9 549.4 387.5 557.3 400.2 555C500.2 521.8 568 426.9 568 316C568 177.3 455.5 72 316.8 72zM169.2 416.9C167.9 417.9 168.2 420.2 169.9 422.1C171.5 423.7 173.8 424.4 175.1 423.1C176.4 422.1 176.1 419.8 174.4 417.9C172.8 416.3 170.5 415.6 169.2 416.9zM158.4 408.8C157.7 410.1 158.7 411.7 160.7 412.7C162.3 413.7 164.3 413.4 165 412C165.7 410.7 164.7 409.1 162.7 408.1C160.7 407.5 159.1 407.8 158.4 408.8zM190.8 444.4C189.2 445.7 189.8 448.7 192.1 450.6C194.4 452.9 197.3 453.2 198.6 451.6C199.9 450.3 199.3 447.3 197.3 445.4C195.1 443.1 192.1 442.8 190.8 444.4zM179.4 429.7C177.8 430.7 177.8 433.3 179.4 435.6C181 437.9 183.7 438.9 185 437.9C186.6 436.6 186.6 434 185 431.7C183.6 429.4 181 428.4 179.4 429.7z"
+        />
+      </symbol>
+    </svg>
 
-    <!-- NAVBAR -->
-    <nav class="navbar">
-      <button class="nav-menu-btn" id="menuBtn">&#9776;</button>
-      <span class="nav-title">Azqilana</span>
-      <button class="nav-theme-btn" id="themeBtn">Terang</button>
-    </nav>
-
-    <!-- SIDEBAR -->
-    <div class="sidebar-overlay" id="sidebarOverlay"></div>
-    <div class="sidebar" id="sidebar">
-      <ul>
-        <li><a href="/" id="nav-beranda">Beranda</a></li>
-        <li><a href="/skill" id="nav-skill">Skill</a></li>
-        <li><a href="/karya" id="nav-karya">Karya</a></li>
-        <li><a href="/kontak" id="nav-kontak">Kontak</a></li>
+    <!-- Header -->
+    <div class="card header" id="headerBar">
+      <div class="logo">
+        <h1>Azqilana</h1>
+        <p>Mulai aja dulu</p>
+      </div>
+      <ul class="nav-desktop">
+        <li onclick="scrollToSection('home')">Home</li>
+        <li onclick="scrollToSection('skill')">Skill</li>
+        <li onclick="scrollToSection('karya')">Karya</li>
+        <li onclick="scrollToSection('contact')">Kontak</li>
       </ul>
+      <button id="tema">Gelap</button>
+      <div class="menu-btn" id="hamburger">
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
     </div>
 
-    <main id="main-go"></main>
+    <!-- Nav Menu (mobile dropdown) --!>
+  <div class="nav-menu" id="nav">
+    <ul>
+      <li onclick="scrollToSection('home')">Home</li>
+      <li onclick="scrollToSection('skill')">Skill</li>
+      <li onclick="scrollToSection('karya')">Karya</li>
+      <li onclick="scrollToSection('contact')">Kontak</li>
+    </ul>
+  </div>
 
-    <script type="module" src="./index.js"></script>
+  <div class="content-wrap">
+  <!-- Profile -->
+    <div class="card" id="home">
+      <img class="profile-pic" src="pp.png" alt="Foto Profil" />
+      <div class="profile-name">Azqilana</div>
+      <p class="profile-tagline">Mulai Aja Dulu</p>
+      <p id="hero_deskripsi">
+        Azqilana junior web developer membantu anda membuat website landing page
+        atau company profile yang responsif dan ramah SEO.
+      </p>
+    </div>
+
+    <!-- Skill -->
+    <div class="card" id="skill">
+      <h2>Skill</h2>
+      <div class="skill-box skill-html">HTML</div>
+      <div class="skill-box skill-css">CSS</div>
+      <div class="skill-box skill-js">Javascript</div>
+      <div class="skill-box skill-react">React</div>
+      <div class="skill-box skill-nodejs">Node.js</div>
+    </div>
+
+    <!-- Karya -->
+    <div class="card" id="karya">
+      <h2>Karya</h2>
+      <div class="karya-grid">
+        <div class="karya-item tema-mathnote">
+          <img class="karya-img" src="mathnote.png" alt="MathNote" />
+          <div class="karya-info">
+            <p class="karya-judul">MathNote</p>
+            <p class="karya-desc">
+              Website catatan pintar untuk menulis catatan dan bisa digunakan
+              sebagai kalkulator sederhana.
+            </p>
+            <div class="karya-links">
+              <a
+                class="karya-github"
+                href="https://github.com/azqilana/mathnote"
+                target="_blank"
+                rel="noopener"
+              >
+                <svg
+                  width="16"
+                  height="16"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                >
+                  <path
+                    d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577v-2.165c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0 1 12 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.63-5.37-12-12-12z"
+                  />
+                </svg>
+                GitHub
+              </a>
+              <a
+                class="karya-demo"
+                href="https://mathnote.azqilana.my.id/"
+                target="_blank"
+                rel="noopener"
+              >
+                🔗 Live Demo
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="karya-item tema-darbom">
+          <img class="karya-img" src="DarBom.webp" alt="DarBom" />
+          <div class="karya-info">
+            <p class="karya-judul">DarBom</p>
+            <p class="karya-desc">
+              Game sederhana membuka kartu sambil menghindari bom. Buka semua
+              kartu tanpa kena bom untuk menang!
+            </p>
+            <div class="karya-links">
+              <a
+                class="karya-github"
+                href="https://github.com/azqilana/DarBom"
+                target="_blank"
+                rel="noopener"
+              >
+                <svg
+                  width="16"
+                  height="16"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                >
+                  <path
+                    d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577v-2.165c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0 1 12 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.63-5.37-12-12-12z"
+                  />
+                </svg>
+                GitHub
+              </a>
+              <a
+                class="karya-demo"
+                href="https://darbom.azqilana.my.id/"
+                target="_blank"
+                rel="noopener"
+              >
+                🔗 Live Demo
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Contact -->
+    <div class="card" id="contact">
+      <h2>Kontak</h2>
+      <div class="sosmed-section">
+        <h2>Sosial Media</h2>
+        <div class="sosmed-row">
+          <a
+            class="sosmed-link"
+            href="https://linkedin.com/in/muhammadazqilana"
+            target="_blank"
+            rel="noopener"
+          >
+            <span class="sosmed-icon"
+              ><svg><use href="#linkedin"></use></svg
+            ></span>
+            LinkedIn
+          </a>
+          <a
+            class="sosmed-link"
+            href="https://github.com/azqilana"
+            target="_blank"
+            rel="noopener"
+          >
+            <span class="sosmed-icon"
+              ><svg><use href="#github"></use></svg
+            ></span>
+            GitHub
+          </a>
+        </div>
+      </div>
+
+      <div class="form-section">
+        <h2>Hubungi Saya</h2>
+        <form id="contactForm">
+          <input
+            class="contact-input"
+            type="text"
+            id="nama"
+            placeholder="Nama"
+            required
+          />
+          <input
+            class="contact-input"
+            type="email"
+            id="email"
+            placeholder="Email"
+            required
+          />
+          <textarea
+            class="contact-textarea"
+            id="pesan"
+            placeholder="Pesan"
+            required
+          ></textarea>
+          <div class="btn-row">
+            <button type="button" id="whatsapp" class="btn-whatsapp">
+              WhatsApp
+            </button>
+            <button type="button" id="kirim" class="btn-kirim">Kirim</button>
+          </div>
+        </form>
+      </div>
+    </div>
+
     <script>
-      // Theme toggle (global, tidak bergantung module)
-      document.addEventListener('DOMContentLoaded', () => {
-        const themeBtn = document.getElementById('themeBtn');
-        let isLight = false;
-        themeBtn.addEventListener('click', () => {
-          isLight = !isLight;
-          document.body.classList.toggle('light', isLight);
-          themeBtn.textContent = isLight ? 'Gelap' : 'Terang';
-        });
+      function scrollToSection(id) {
+        document.getElementById(id).scrollIntoView({ behavior: "smooth" });
+        document.getElementById("nav").classList.remove("aktif");
+        document.getElementById("hamburger").classList.remove("aktif");
+      }
 
-        const menuBtn = document.getElementById('menuBtn');
-        const sidebar = document.getElementById('sidebar');
-        const overlay = document.getElementById('sidebarOverlay');
+      const hamenu = document.querySelector("#hamburger");
+      const nav = document.querySelector("#nav");
 
-        menuBtn.addEventListener('click', () => {
-          sidebar.classList.add('active');
-          overlay.classList.add('active');
-        });
-        overlay.addEventListener('click', () => {
-          sidebar.classList.remove('active');
-          overlay.classList.remove('active');
-        });
-        document.querySelectorAll('.sidebar a').forEach(link => {
-          link.addEventListener('click', () => {
-            sidebar.classList.remove('active');
-            overlay.classList.remove('active');
-          });
-        });
+      hamenu.addEventListener("click", () => {
+        nav.classList.toggle("aktif");
+        hamenu.classList.toggle("aktif");
+
+        if (nav.classList.contains("aktif")) {
+          const hRect = hamenu.getBoundingClientRect();
+          nav.style.left = hRect.left + "px";
+          nav.style.top = hRect.bottom + 40 + "px";
+        } else {
+          nav.style.left = "";
+          nav.style.top = "";
+        }
       });
 
-      // Highlight active nav
-      function setActiveNav() {
-        const path = window.location.pathname;
-        const map = { '/': 'nav-beranda', '/skill': 'nav-skill', '/karya': 'nav-karya', '/kontak': 'nav-kontak' };
-        document.querySelectorAll('.sidebar a').forEach(a => a.classList.remove('active-link'));
-        const id = map[path];
-        if (id) document.getElementById(id)?.classList.add('active-link');
+      document.addEventListener("click", (e) => {
+        if (!hamenu.contains(e.target)) {
+          nav.classList.remove("aktif");
+          hamenu.classList.remove("aktif");
+          nav.style.left = "";
+          nav.style.top = "";
+        }
+      });
+
+      const tema = document.querySelector("#tema");
+      class PengaturTema {
+        constructor(Tombol) {
+          this.tombol = Tombol;
+        }
+        inisialisasi() {
+          const perangkatModeGelap = window.matchMedia(
+            "(prefers-color-scheme: dark)",
+          ).matches;
+
+          if (perangkatModeGelap) {
+            this.setModeGelap();
+          } else {
+            this.setModeTerang();
+          }
+
+          this.tombol.addEventListener("click", () => this.handleKlik());
+        }
+        setModeGelap() {
+          document.documentElement.setAttribute("data-theme", "gelap");
+          this.tombol.textContent = "Terang";
+          this.tombol.setAttribute("aria-label", "tombol tema terang");
+        }
+        setModeTerang() {
+          document.documentElement.removeAttribute("data-theme");
+          this.tombol.textContent = "Gelap";
+          this.tombol.setAttribute("aria-label", "tombol tema gelap");
+        }
+        handleKlik() {
+          const isGelap =
+            document.documentElement.getAttribute("data-theme") === "gelap";
+          if (isGelap) {
+            this.setModeTerang();
+          } else {
+            this.setModeGelap();
+          }
+        }
       }
-      window.addEventListener('popstate', setActiveNav);
-      document.addEventListener('DOMContentLoaded', setActiveNav);
+
+      const temaAplikasi = new PengaturTema(tema);
+      temaAplikasi.inisialisasi();
+
+      const Wa = document.querySelector("#whatsapp");
+      const kirim = document.querySelector("#kirim");
+      const element = Wa && kirim;
+      if (element) {
+        class AksiForm {
+          constructor() {
+            this.namaInput = document.querySelector("#nama");
+            this.emailInput = document.querySelector("#email");
+            this.pesanTextarea = document.querySelector("#pesan");
+          }
+          ambilIsi() {
+            this.nama = this.namaInput.value.trim();
+            this.email = this.emailInput.value.trim();
+            this.pesan = this.pesanTextarea.value.trim();
+          }
+          filter() {
+            if (this.nama.length < 3) {
+              alert("Nama minimal 3 karakter");
+              return false;
+            }
+            this.emailValid =
+              /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]+$/.test(this.email);
+            if (!this.emailValid) {
+              alert("Format email tidak valid");
+              return false;
+            }
+            if (this.pesan.length < 10) {
+              alert("Pesan minimal 10 karakter");
+              return false;
+            }
+            return true;
+          }
+          kirimWhatsApp() {
+            this.wa = "6287732902083";
+            this.teks = encodeURIComponent(
+              `Halo, nama saya ${this.nama}.\nE-mail: ${this.email}\n\n${this.pesan}`,
+            );
+            window.open(`https://wa.me/${this.wa}?text=${this.teks}`, "_blank");
+          }
+          kirimSheet() {
+            kirim.disabled = true;
+            kirim.textContent = "Mengirim...";
+
+            fetch(
+              "https://script.google.com/macros/s/AKfycbz37d10__CCvUQHe7SuRc3DfsPms7W1Iw2MlQR3cSSeFOl_b61Kx6NiOtkf9QJIMCVC7Q/exec",
+              {
+                method: "POST",
+                body: JSON.stringify({
+                  nama: this.nama,
+                  email: this.email,
+                  pesan: this.pesan,
+                }),
+              },
+            )
+              .then(() => {
+                kirim.textContent = "Terkirim ✓";
+                setTimeout(() => {
+                  kirim.textContent = "Kirim";
+                  kirim.disabled = false;
+                }, 2000);
+              })
+              .catch(() => {
+                alert("Gagal kirim");
+                kirim.textContent = "Kirim";
+                kirim.disabled = false;
+              });
+          }
+        }
+        const Af = new AksiForm();
+        Wa.addEventListener("click", (e) => {
+          e.preventDefault();
+          Af.ambilIsi();
+          if (!Af.filter()) return;
+          Af.kirimWhatsApp();
+        });
+        kirim.addEventListener("click", (e) => {
+          e.preventDefault();
+          Af.ambilIsi();
+          if (!Af.filter()) return;
+          Af.kirimSheet();
+        });
+      }
     </script>
   </body>
 </html>
