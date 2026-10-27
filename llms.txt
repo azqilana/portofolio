@@ -1,4 +1,21 @@
 # Azqilana - Junior Web Developer
-> Ini adalah website portofolio yang menjelaskan informasi data,resume,skill,dan projek dari pemilik website yaitu Azqilana.
-## Informasi Utama
-- [Beranda](https://azqilana.my.id/index.html): Halaman utama portfolio yang berisi ringkasan informasi atau headline pemilik website yaitu Azqilana.
+> Website portofolio Azqilana, Fullstack Web Developer yang membantu membuat landing page, website UMKM, dan company profile yang cepat, responsif, dan ramah SEO. Motto: "Mulai aja dulu".
+
+## Halaman Utama
+- [Beranda](https://azqilana.my.id/index.html): Perkenalan singkat, tagline, daftar skill, dan tautan ke karya.
+- [Karya](https://azqilana.my.id/karya.html): Daftar proyek Azqilana beserta deskripsi, tautan GitHub, dan live demo.
+- [Skill](https://azqilana.my.id/skill.html): Daftar skill Azqilana: HTML, CSS, JavaScript, React, Node.js, dan TypeScript.
+- [Tentang](https://azqilana.my.id/tentang.html): Profil singkat dan daftar skill Azqilana.
+- [Kontak](https://azqilana.my.id/kontak.html): Formulir kontak (kirim pesan atau lewat WhatsApp), serta tautan LinkedIn dan GitHub.
+
+## Karya
+- [MathNote](https://mathnote.azqilana.my.id/): Website catatan pintar untuk menulis catatan dan bisa digunakan sebagai kalkulator sederhana. Kode: https://github.com/azqilana/mathnote
+- [DarBom](https://darbom.azqilana.my.id/): Game sederhana membuka kartu sambil menghindari bom. Buka semua kartu tanpa kena bom untuk menang. Kode: https://github.com/azqilana/DarBom
+- [Kobar](https://kobar.azqilana.my.id/): Starter-Kit JavaScript ringan dengan arsitektur Component-Observer. Framework DOM tanpa build tool dan tanpa boilerplate. Kode: https://github.com/azqilana/kobar
+
+## Skill
+HTML, CSS, JavaScript, React, Node.js, TypeScript.
+
+## Tautan
+- [GitHub](https://github.com/azqilana)
+- [LinkedIn](https://linkedin.com/in/muhammadazqilana)

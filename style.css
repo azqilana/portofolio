@@ -50,7 +50,30 @@ input,textarea{width:100%;font:inherit;padding:.7rem 1rem;margin-bottom:.9rem;bo
 textarea{min-height:140px;resize:vertical}
 .err{min-height:1.5rem;color:var(--err);font-weight:700;margin:0 0 .6rem}
 footer{text-align:center;padding:2rem 1rem;color:var(--muted);border-top:3px solid var(--line)}
-@media(max-width:760px){.hero,.about,.contact{grid-template-columns:1fr}.hero .photo{order:-1;max-width:240px}.about .photo{max-width:220px}}
+.skills{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1.5rem}
+.sk{background:var(--card);border:3px solid var(--line);border-radius:18px;overflow:hidden;box-shadow:5px 5px 0 var(--c,var(--yellow))}
+.sk h3{background:var(--c,var(--yellow));color:var(--on);padding:.7rem 1rem;border-bottom:3px solid var(--line);font-size:1.4rem}
+.sk p{margin:0;padding:.9rem 1rem 1.1rem;color:var(--muted)}
+#menu{display:none;background:var(--card);color:var(--ink)}
+.bars{display:block;width:20px;height:3px;border-radius:2px;background:currentColor;box-shadow:0 -7px 0 currentColor,0 7px 0 currentColor}
+#tema .ico{display:none}
+@media(max-width:760px){
+.bar{flex-wrap:nowrap;gap:.6rem;padding:.55rem 1rem}
+.logo{min-width:0}.logo b{font-size:1.3rem}.logo small{display:none}
+#tema,#menu{min-width:46px;min-height:46px;padding:0 .8rem;display:inline-flex;align-items:center;justify-content:center}
+#tema .lbl{display:none}#tema .ico{display:inline;font-size:1.25rem;line-height:1}
+nav{display:none;position:absolute;top:100%;left:0;right:0;flex-direction:column;gap:.3rem;padding:.6rem 1rem 1rem;background:var(--bg);border-bottom:3px solid var(--line)}
+nav.open{display:flex}
+nav a{padding:.8rem 1rem;min-height:48px;display:flex;align-items:center;font-size:1.1rem;border-radius:14px}
+main{padding-top:1.8rem}
+.hero,.about,.contact{grid-template-columns:1fr}
+.hero{text-align:center;justify-items:center;gap:1.5rem}
+.hero .photo{order:-1;width:200px;max-width:60vw}
+.hero .lead{margin-inline:auto}.hero .row{justify-content:center}
+.btn{min-height:44px}.hero .btn{min-height:48px}
+.about .photo{width:200px;max-width:60vw;margin-inline:auto}
+.skills{grid-template-columns:1fr 1fr;gap:1.1rem}
+}
 @media(prefers-reduced-motion:reduce){*{transition:none!important}}
 .ic{display:inline-grid;place-items:center;flex:none;width:2rem;height:2rem;background:#fff;color:#1D1A3B;border:2px solid var(--line);border-radius:50%}
 .ic svg{width:1.2rem;height:1.2rem}
