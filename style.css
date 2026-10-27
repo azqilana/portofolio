@@ -26,7 +26,7 @@ h2{font-size:clamp(1.8rem,5vw,2.6rem);margin:3rem 0 1.2rem}
 main>h2:first-child{margin-top:0}
 .lead{font-size:1.2rem;max-width:34rem}
 .hero{display:grid;grid-template-columns:1fr 280px;gap:2.5rem;align-items:center}
-.photo{width:100%;height:auto;aspect-ratio:1;object-fit:cover;background:var(--yellow);border:3px solid var(--line);border-radius:42% 58% 55% 45%/50% 45% 55% 50%;box-shadow:8px 8px 0 var(--pink)}
+.photo{width:100%;height:auto;aspect-ratio:1;object-fit:cover;background:var(--yellow);border:3px solid var(--line);border-radius:42% 58% 55% 45%/50% 45% 55% 50%;box-shadow:8px 8px 0 var(--blue)}
 .tag{display:inline-block;background:var(--mint);color:var(--on);border:3px solid var(--line);border-radius:99px;padding:.1rem .9rem;font-weight:800;margin:.8rem 0}
 .row{display:flex;flex-wrap:wrap;gap:.75rem;margin-top:1.4rem}
 .chips{display:flex;flex-wrap:wrap;gap:.7rem;padding:0;margin:0;list-style:none}
@@ -81,3 +81,36 @@ main{padding-top:1.8rem}
 .btn.sm .ic{width:1.6rem;height:1.6rem}
 .btn.sm .ic svg{width:.95rem;height:.95rem}
 main{flex:1;width:100%}
+
+/* Laptop: semua halaman muat satu layar (header, isi, footer) */
+@media(min-width:761px){
+body{height:100vh;height:100dvh;overflow:hidden}
+.bar{padding:.7rem clamp(1rem,4vw,2.5rem)}
+.logo b{font-size:1.35rem}.logo small{font-size:.72rem;line-height:1.2}
+nav a{padding:.2rem .8rem}
+#tema{padding:.2rem .9rem}
+main{min-height:0;overflow:auto;display:flex;flex-direction:column;justify-content:center;padding-block:clamp(.4rem,1.5vh,1.2rem)}
+footer{flex:none;padding:.8rem 1rem;font-size:.85rem}
+h1{font-size:clamp(1.8rem,min(5.5vw,8vh),3.6rem)}
+h2{font-size:clamp(1.3rem,4.6vh,2.1rem);margin:0 0 .7rem}
+.lead{font-size:clamp(1rem,2.6vh,1.2rem)}
+.tag{margin:.5rem 0}.row{margin-top:.9rem}
+.hero{grid-template-columns:1fr auto;gap:clamp(1rem,4vw,2.5rem)}
+.hero .photo,.about .photo{width:auto;height:clamp(150px,42vh,320px)}
+.about{grid-template-columns:auto 1fr;gap:1.5rem;align-items:center}
+.about p{margin:0 0 .6rem;font-size:.98rem;line-height:1.5}
+.about h2{font-size:1.3rem!important;margin:.5rem 0 .6rem!important}
+.chips li{padding:.2rem .9rem}
+.grid{gap:1.2rem}
+.card img{aspect-ratio:auto;height:clamp(80px,22vh,190px);object-fit:contain}
+.card img.logo{padding:.4rem}
+.card>div{padding:.8rem 1rem 1rem;gap:.4rem}
+.card h3{font-size:1.3rem}.card p{font-size:.92rem;line-height:1.45}
+.skills{grid-template-columns:repeat(3,1fr);gap:1rem}
+.sk h3{padding:.45rem 1rem;font-size:1.2rem}.sk p{padding:.6rem 1rem .8rem}
+.contact{gap:1.2rem}
+.box{padding:1rem 1.2rem}
+input,textarea{padding:.45rem .9rem;margin-bottom:.5rem}
+textarea{min-height:clamp(60px,14vh,130px)}
+.err{min-height:1.2rem;margin:0 0 .4rem}
+}
