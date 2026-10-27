@@ -2,7 +2,7 @@
 > Website portofolio Azqilana, Fullstack Web Developer yang membantu membuat landing page, website UMKM, dan company profile yang cepat, responsif, dan ramah SEO. Motto: "Mulai aja dulu".
 
 ## Halaman Utama
-- [Beranda](https://azqilana.my.id/index.html): Perkenalan singkat, tagline, daftar skill, dan tautan ke karya.
+- [Beranda](https://azqilana.my.id/index.html): Perkenalan singkat, tagline, dan tombol menuju halaman Karya dan Skill.
 - [Karya](https://azqilana.my.id/karya.html): Daftar proyek Azqilana beserta deskripsi, tautan GitHub, dan live demo.
 - [Skill](https://azqilana.my.id/skill.html): Daftar skill Azqilana: HTML, CSS, JavaScript, React, Node.js, dan TypeScript.
 - [Tentang](https://azqilana.my.id/tentang.html): Profil singkat dan daftar skill Azqilana.
