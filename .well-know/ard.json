@@ -1,0 +1,63 @@
+{
+  "$schema": "https://agenticresourcediscovery.org/context/v1",
+  "name": "Portofolio Azqilana",
+  "version": "1.0.0",
+  "description": "Situs portofolio resmi Muhammad Azqilana, Fullstack Web Developer.",
+  "resources": [
+    {
+      "identifier": "urn:air:azqilana.my.id:page:beranda",
+      "displayName": "Beranda",
+      "type": "application/agent-skills+json",
+      "url": "https://azqilana.my.id/",
+      "description": "Halaman utama portofolio Azqilana",
+      "representativeQueries": [
+        "lihat halaman utama portofolio azqilana",
+        "buka beranda azqilana"
+      ]
+    },
+    {
+      "identifier": "urn:air:azqilana.my.id:page:skill",
+      "displayName": "Skill",
+      "type": "application/agent-skills+json",
+      "url": "https://azqilana.my.id/skill",
+      "description": "Daftar keahlian teknis seperti HTML, CSS, JavaScript, React, Node.js, dan TypeScript",
+      "representativeQueries": [
+        "apa saja skill azqilana",
+        "lihat keahlian teknis azqilana"
+      ]
+    },
+    {
+      "identifier": "urn:air:azqilana.my.id:page:tentang",
+      "displayName": "Tentang",
+      "type": "application/agent-skills+json",
+      "url": "https://azqilana.my.id/tentang",
+      "description": "Informasi profil singkat dan moto hidup Azqilana",
+      "representativeQueries": [
+        "siapa azqilana",
+        "tentang azqilana fullstack web developer"
+      ]
+    },
+    {
+      "identifier": "urn:air:azqilana.my.id:page:karya",
+      "displayName": "Karya",
+      "type": "application/agent-skills+json",
+      "url": "https://azqilana.my.id/karya",
+      "description": "Daftar proyek dan karya yang pernah dibuat seperti MathNote",
+      "representativeQueries": [
+        "lihat portofolio proyek azqilana",
+        "apa saja karya azqilana"
+      ]
+    },
+    {
+      "identifier": "urn:air:azqilana.my.id:page:kontak",
+      "displayName": "Kontak",
+      "type": "application/agent-skills+json",
+      "url": "https://azqilana.my.id/kontak",
+      "description": "Halaman untuk menghubungi Azqilana",
+      "representativeQueries": [
+        "cara menghubungi azqilana",
+        "kontak azqilana"
+      ]
+    }
+  ]
+}
