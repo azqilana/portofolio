@@ -1,0 +1,38 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "name": "Portofolio Azqilana",
+  "version": "1.0.0",
+  "description": "Situs portofolio resmi Muhammad Azqilana, Fullstack Web Developer yang menyediakan layanan pembuatan landing page, website UMKM, dan company profile.",
+  "resources": [
+    {
+      "name": "Beranda",
+      "description": "Halaman utama portofolio Azqilana",
+      "type": "website",
+      "url": "https://azqilana.my.id/"
+    },
+    {
+      "name": "Skill",
+      "description": "Daftar keahlian teknis seperti HTML, CSS, JavaScript, React, Node.js, dan TypeScript",
+      "type": "website",
+      "url": "https://azqilana.my.id/skill"
+    },
+    {
+      "name": "Tentang",
+      "description": "Informasi profil singkat dan moto hidup Azqilana",
+      "type": "website",
+      "url": "https://azqilana.my.id/tentang"
+    },
+    {
+      "name": "Karya",
+      "description": "Daftar proyek dan karya yang pernah dibuat seperti MathNote",
+      "type": "website",
+      "url": "https://azqilana.my.id/karya"
+    },
+    {
+      "name": "Kontak",
+      "description": "Halaman untuk menghubungi Azqilana melalui media sosial atau formulir pesan",
+      "type": "website",
+      "url": "https://azqilana.my.id/kontak"
+    }
+  ]
+}
